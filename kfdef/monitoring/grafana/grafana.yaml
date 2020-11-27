@@ -26,6 +26,7 @@ spec:
             api_url: http://dex-opf-monitoring.apps.hukhan.dev.datahub.redhat.com/userinfo
             auth_url: http://dex-opf-monitoring.apps.hukhan.dev.datahub.redhat.com/auth
             token_url: http://dex-opf-monitoring.apps.hukhan.dev.datahub.redhat.com/token
+            role_attribute_path: contains(groups[*], 'operate-first') && 'Admin' || 'Editor'
     dashboardLabelSelector:
     -   matchExpressions:
         -   key: app
