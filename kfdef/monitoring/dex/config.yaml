@@ -27,8 +27,9 @@ staticClients:
   - https://grafana-opf-monitoring.apps.hukhan.dev.datahub.redhat.com/login/generic_oauth
   secret: secret
 
+
 oauth2:
-    alwaysShowLoginScreen: false
-    responseTypes: ["code", "token", "id_token"]
-    skipApprovalScreen: true
-enablePasswordDB: false
+  skipApprovalScreen: true
+#    alwaysShowLoginScreen: false
+#    responseTypes: ["code", "token", "id_token"]
+#enablePasswordDB: false

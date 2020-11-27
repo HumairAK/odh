@@ -18,7 +18,9 @@ spec:
         auth.generic_oauth:
             name: Dex
             enabled: true
-            scopes: openid # profile email groups
+            scopes: openid email groups profile
+            email_attribute_name: name
+            email_attribute_path: name
             client_id: grafana
             client_secret: secret
             api_url: http://dex-opf-monitoring.apps.hukhan.dev.datahub.redhat.com/userinfo
