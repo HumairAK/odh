@@ -1,0 +1,34 @@
+storage:
+  type: memory
+telemetry:
+  http: 0.0.0.0:5558
+web:
+  http: 0.0.0.0:5556
+grpc:
+  addr: 0.0.0.0:5557
+issuer: http://dex-opf-monitoring.apps.hukhan.dev.datahub.redhat.com
+connectors:
+  # OpenShift
+  - type: openshift
+    id: openshift
+    name: OpenShift
+    config:
+      issuer: https://api.hukhan.dev.datahub.redhat.com:6443
+      clientID: system:serviceaccount:opf-monitoring:dex
+      clientSecret: $DEX_OAUTH_CLIENT_SECRET
+      insecureCA: true
+      redirectURI: http://dex-opf-monitoring.apps.hukhan.dev.datahub.redhat.com/callback
+      groups:
+        - operate-first
+staticClients:
+- id: grafana
+  name: Grafana
+  redirectURIs:
+  - https://grafana-opf-monitoring.apps.hukhan.dev.datahub.redhat.com/login/generic_oauth
+  secret: secret
+
+oauth2:
+    alwaysShowLoginScreen: false
+    responseTypes: ["code", "token", "id_token"]
+    skipApprovalScreen: true
+enablePasswordDB: false
