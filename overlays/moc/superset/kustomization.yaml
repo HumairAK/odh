@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../../base/components/superset
+patchesJson6902:
+  - target:
+      kind: KfDef
+      name: opendatahub
+      version: v1
+      group: kfdef.apps.kubeflow.org
+    patch: |
+      - op: add
+        path: /spec/applications/-
+        value:
+          kustomizeConfig:
+            repoRef:
+              name: of-overrides
+              path: overlays/moc/superset/overrides
+          name: superset
