@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: centraldashboard
+  namespace: kubeflow
+spec:
+  template:
+    spec:
+      containers:
+      - env:
+        - name: ADDING_NEW_ENV_VARIABLE
+          value: EXAMPE_VAR
+        name: centraldashboard
