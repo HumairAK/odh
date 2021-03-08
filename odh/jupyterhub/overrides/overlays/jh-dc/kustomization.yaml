@@ -4,4 +4,4 @@ kind: Kustomization
 bases:
   - ../../base
 patchesStrategicMerge:
-  - jh-dc.yaml
+  - jupyterhub-dc.yaml
