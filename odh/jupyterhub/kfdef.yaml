@@ -22,7 +22,7 @@ spec:
           - jh-dc
         repoRef:
           name: opf-manifests
-          path: odh/jupyterhub/overrides/jupyterhub
+          path: odh/jupyterhub/overrides
       name: jupyterhub
   repos:
     - name: manifests
