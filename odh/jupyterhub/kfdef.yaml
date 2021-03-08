@@ -18,7 +18,8 @@ spec:
           path: jupyterhub/jupyterhub
       name: jupyterhub
     - kustomizeConfig:
-        overlays: []
+        overlays:
+          - jh-dc
         parameters:
           - name: s3_endpoint_url
             value: s3.odh.com
