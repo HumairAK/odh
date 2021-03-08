@@ -24,7 +24,7 @@ spec:
             value: s3.odh.com
         repoRef:
           name: opf-manifests
-          path: odh/base/jupyterhub/overrides/jupyterhub
+          path: odh/jupyterhub/overrides/jupyterhub
       name: jupyterhub
     - kustomizeConfig:
         overlays:

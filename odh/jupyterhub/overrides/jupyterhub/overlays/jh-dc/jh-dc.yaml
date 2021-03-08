@@ -1,0 +1,8 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    app: jupyterhub
+  name: jupyterhub
+spec:
+  replicas: 6
