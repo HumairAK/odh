@@ -23,7 +23,6 @@ resources:
   - ../../../base/ingresscontrollers/default
   - ../../../base/namespaces/acm
   - ../../../base/namespaces/argocd
-  - ../../../base/namespaces/cert-manager
   - ../../../base/namespaces/ds-black-flake
   - ../../../base/namespaces/ds-example-project
   - ../../../base/namespaces/ds-ml-workflows-ws
