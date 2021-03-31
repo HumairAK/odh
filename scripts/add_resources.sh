@@ -54,7 +54,7 @@ _add_new_resource(){
 
   if [[ -d "${destination_dir}" ]]
   then
-    _error "Resource ${resource_name} of type ${resource_type} already exists, but the -f/--file option was used. To add this resource omit this flag."
+    _error "Error: Resource ${resource_name} of type ${resource_type} already exists, but the -f/--file option was used. To add this resource omit this flag."
   fi
 
   mkdir -p ${destination_dir}
