@@ -1,0 +1,13 @@
+kind: LimitRange
+apiVersion: v1
+metadata:
+  name: osc-playground-custom
+spec:
+  limits:
+    - type: Container
+      default:
+        cpu: 2Gi
+        memory: 1Gi
+      defaultRequest:
+        cpu: 2Gi
+        memory: 1Gi
